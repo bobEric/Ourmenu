@@ -3,16 +3,20 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
+
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
 <<<<<<< HEAD
+<<<<<<< HEAD
   rootPage:any = 'BreakfastPage';
 =======
   rootPage:any = 'FirstPage';
 >>>>>>> project/Michael
+=======
+  rootPage:any = 'LunchPage';
+>>>>>>> project/gravity
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
