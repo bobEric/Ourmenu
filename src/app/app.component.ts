@@ -8,7 +8,11 @@ import { HomePage } from '../pages/home/home';
   templateUrl: 'app.html'
 })
 export class MyApp {
+<<<<<<< HEAD
   rootPage:any = 'BreakfastPage';
+=======
+  rootPage:any = 'FirstPage';
+>>>>>>> project/Michael
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
