@@ -15,8 +15,20 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class FirstPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  tab1:any;
+  tab2:any;
+  tab3:any;
+
+
+  constructor(public navCtrl: NavController, public navParams: NavParams)
+  
+{
+
+  this.tab1="BreakfastPage";
+  this.tab2="LunchPage";
+  this.tab3="SupperPage";
+
+}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad FirstPage');
