@@ -16,6 +16,12 @@ import { IonicStorageModule } from '@ionic/storage';
 })
 export class SupperPage {
 
+  Day:string;
+  Apettizer:string;
+  Dessert:string;
+  Main_Dish:string;
+  Side_Dish:string;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
