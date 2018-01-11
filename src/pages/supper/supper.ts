@@ -54,7 +54,7 @@ export class SupperPage {
       return Math.floor(Math.random()*9999);
     }
 
-    menu(){
+    men(){
       this.navCtrl.push("WeekMenuPage");
     }
 
