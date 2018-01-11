@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { IonicStorageModule } from '@ionic/storage';
+import { Storage } from '@ionic/storage';
 
 /**
  * Generated class for the SupperPage page.
@@ -22,7 +22,7 @@ export class SupperPage {
   Main_Dish:string;
   Side_Dish:string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private storage:Storage) {
   }
 
   ionViewDidLoad() {
@@ -37,6 +37,25 @@ export class SupperPage {
         Side_Dish:this.Side_Dish,
       }
 
+      let id=this.magicNumbers();
+      this.storage.set('Day'+id,menu).then(()=>{
+        alert.apply("menu saved");
+      }).catch((error)=>{
+        console.log(error);
+      });
+      this.Day='';
+      this.Appetizer='';
+      this.Dessert='';
+      this.Main_Dish='';
+      this.Side_Dish='';
+    }
+
+    magicNumbers(){
+      return Math.floor(Math.random()*9999);
+    }
+
+    menu(){
+      this.navCtrl.push("WeekMenuPage");
     }
 
   }
