@@ -22,14 +22,15 @@ export class SupperPage {
   Main_Dish:string;
   Side_Dish:string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private torage:Storage) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private storage:Storage) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SupperPage');
+  }
 
     getMenu(){
-      let weekmenu={
+      let menu={
         Day:this.Day,
         Appetizer:this.Appetizer,
         Dessert:this.Dessert,
@@ -38,8 +39,8 @@ export class SupperPage {
       }
 
       let id =this.magicNumbers();
-      this.storage.set('Day'+id,weekmenu).then(()=>{
-        alert.apply("menu saved");
+      this.storage.set('Day'+id, menu).then(()=>{
+        alert("Supper saved");
       }).catch((error)=>{
         console.log(error);
       });
@@ -57,7 +58,5 @@ export class SupperPage {
     showMenu(){
       this.navCtrl.push("WeekMenuPage");
     }
-
-  }
 
 }

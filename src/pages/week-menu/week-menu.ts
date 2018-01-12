@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Storage } from '@ionic/storage';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
@@ -14,12 +15,24 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'week-menu.html',
 })
 export class WeekMenuPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  menus:any[]=[];
+  constructor(public navCtrl: NavController, public navParams: NavParams, private storage:Storage) {
+    this.allMenus();
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad WeekMenuPage');
   }
+
+  allMenus(){
+    this.storage.ready().then(()=>{
+      this.storage.forEach((value)=>{
+        this.menus.push(value);
+      });
+    
+    }).catch();
+    console.log(this.menus);
+  }
+  
 
 }

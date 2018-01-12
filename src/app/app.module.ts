@@ -11,7 +11,6 @@ import { MyApp } from './app.component';
 @NgModule({
   declarations: [
     MyApp,
-    
   ],
   imports: [
     BrowserModule,
@@ -21,7 +20,6 @@ import { MyApp } from './app.component';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    
   ],
   providers: [
     StatusBar,
