@@ -16,23 +16,14 @@ import { Storage } from '@ionic/storage';
 })
 export class SupperPage {
 
-<<<<<<< HEAD
-  Day:string;
-  Appetizer:string;
-  Dessert:string;
-  Main_Dish:string;
-  Side_Dish:string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private storage:Storage) {
-=======
 Day:string;
 Apettizer:string;
 Dessert:string;
 Main_Dish:string;
 Side_Dish:string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
->>>>>>> project/master
+  constructor(public navCtrl: NavController, public navParams: NavParams, private storage:Storage) {
   }
 
   ionViewDidLoad() {
@@ -42,7 +33,7 @@ Side_Dish:string;
     getMenu(){
       let menu={
         Day:this.Day,
-        Appetizer:this.Appetizer,
+        Appetizer:this.Apettizer,
         Dessert:this.Dessert,
         Main_Dish:this.Main_Dish,
         Side_Dish:this.Side_Dish,
@@ -55,7 +46,7 @@ Side_Dish:string;
         console.log(error);
       });
       this.Day='';
-      this.Appetizer='';
+      this.Apettizer='';
       this.Dessert='';
       this.Main_Dish='';
       this.Side_Dish='';
