@@ -38,7 +38,7 @@ export class BreakfastPage {
 
     let id =this.magicNumbers();
     this.storage.set('Day'+id, menu).then(()=>{
-      alert("Supper saved");
+      alert("Breakfast saved");
     }).catch((error)=>{
       console.log(error);
     });
