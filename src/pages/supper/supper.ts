@@ -16,6 +16,7 @@ import { Storage } from '@ionic/storage';
 })
 export class SupperPage {
 
+<<<<<<< HEAD
   Day:string;
   Appetizer:string;
   Dessert:string;
@@ -23,6 +24,15 @@ export class SupperPage {
   Side_Dish:string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private storage:Storage) {
+=======
+Day:string;
+Apettizer:string;
+Dessert:string;
+Main_Dish:string;
+Side_Dish:string;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+>>>>>>> project/master
   }
 
   ionViewDidLoad() {
